@@ -1,0 +1,78 @@
+﻿@page
+@model SacramentPlanner.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Planner[0].WardBranch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Planner[0].SabbathDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Planner[0].ConductingLeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Planner[0].OpenHymn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Planner[0].OpenPrayer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Planner[0].SacramentHymn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Planner[0].ClosingHymn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Planner[0].ClosingPrayer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Planner) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WardBranch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SabbathDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ConductingLeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpenHymn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpenPrayer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SacramentHymn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClosingHymn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClosingPrayer)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.SacaramentID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.SacaramentID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.SacaramentID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
