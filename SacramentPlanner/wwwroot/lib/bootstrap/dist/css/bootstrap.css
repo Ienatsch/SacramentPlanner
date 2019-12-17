@@ -48,6 +48,10 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.display-3 {
+    font-family: Impact, Charcoal, sans-serif;
+}
+
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
