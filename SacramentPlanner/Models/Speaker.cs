@@ -8,6 +8,7 @@ namespace MeetingPlanner.Models
 {
     public class Speaker
     {
+        public int SpeakerID { get; set; }
         public string NameSpeaker { get; set; }
         public string SpeakerSubject { get; set; }
     } 
