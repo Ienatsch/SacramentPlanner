@@ -10,6 +10,7 @@ namespace MeetingPlanner.Models
     {
         public int PlannerID { get; set; }
 
+        [Display(Name = "Ward/Branch")]
         [StringLength(60, MinimumLength = 3)]
         public string WardBranch { get; set; }
         
@@ -20,18 +21,23 @@ namespace MeetingPlanner.Models
         [StringLength(60, MinimumLength = 3)]
         public string ConductingLeader { get; set;}
 
+        [Display(Name = "Open Hymn")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), Required, StringLength(30)]
         public string OpenHymn { get; set; }
 
+        [Display(Name = "Invocation")]
         [StringLength(60, MinimumLength = 3)]
         public string OpenPrayer { get; set; }
 
+        [Display(Name = "Sacrament Hymn")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), Required, StringLength(30)]
         public string SacramentHymn { get; set;}
 
+        [Display(Name = "Closing Hymn")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), Required, StringLength(30)]
         public string ClosingHymn { get; set;}
 
+        [Display(Name = "Benediction")]
         [StringLength(60, MinimumLength = 3)]
         public string ClosingPrayer { get; set;}
 
