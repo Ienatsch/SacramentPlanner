@@ -8,7 +8,7 @@ namespace MeetingPlanner.Models
 {
     public class Planner
     {
-        public int SacaramentID { get; set; }
+        public int PlannerID { get; set; }
 
         [StringLength(60, MinimumLength = 3)]
         public string WardBranch { get; set; }
@@ -35,6 +35,8 @@ namespace MeetingPlanner.Models
         [StringLength(60, MinimumLength = 3)]
         public string ClosingPrayer { get; set;}
 
+
+        public List<Speaker> Speakers { get; set; }
 
     }
 }

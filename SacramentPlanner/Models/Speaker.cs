@@ -12,6 +12,6 @@ namespace MeetingPlanner.Models
         public int SacramentID { get; set; }
 
         public string NameSpeaker { get; set; }
-        public string SpeakerTopic { get; set; }
-    }
+        public string SpeakerSubject { get; set; }
+    } 
 }
