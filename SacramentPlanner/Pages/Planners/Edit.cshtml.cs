@@ -30,7 +30,7 @@ namespace SacramentPlanner
                 return NotFound();
             }
 
-            Planner = await _context.Planner.FirstOrDefaultAsync(m => m.SacaramentID == id);
+            Planner = await _context.Planner.FirstOrDefaultAsync(m => m.PlannerID == id);
 
             if (Planner == null)
             {
@@ -56,7 +56,7 @@ namespace SacramentPlanner
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!PlannerExists(Planner.SacaramentID))
+                if (!PlannerExists(Planner.PlannerID))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace SacramentPlanner
 
         private bool PlannerExists(int id)
         {
-            return _context.Planner.Any(e => e.SacaramentID == id);
+            return _context.Planner.Any(e => e.PlannerID == id);
         }
     }
 }

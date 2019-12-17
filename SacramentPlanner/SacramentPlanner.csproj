@@ -4,6 +4,34 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Models\Create.cshtml.cs" />
+    <Compile Remove="Models\Delete.cshtml.cs" />
+    <Compile Remove="Models\Details.cshtml.cs" />
+    <Compile Remove="Models\Edit.cshtml.cs" />
+    <Compile Remove="Models\Index.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Models\Create.cshtml" />
+    <Content Remove="Models\Delete.cshtml" />
+    <Content Remove="Models\Details.cshtml" />
+    <Content Remove="Models\Edit.cshtml" />
+    <Content Remove="Models\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.0" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+  </ItemGroup>
+
 
 
 </Project>

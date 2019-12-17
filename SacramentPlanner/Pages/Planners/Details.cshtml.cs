@@ -28,7 +28,7 @@ namespace SacramentPlanner
                 return NotFound();
             }
 
-            Planner = await _context.Planner.FirstOrDefaultAsync(m => m.SacaramentID == id);
+            Planner = await _context.Planner.FirstOrDefaultAsync(m => m.PlannerID == id);
 
             if (Planner == null)
             {
