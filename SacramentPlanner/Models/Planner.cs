@@ -11,14 +11,14 @@ namespace MeetingPlanner.Models
         public int PlannerID { get; set; }
 
         [Display(Name = "Ward/Branch")]
-        [StringLength(60, MinimumLength = 3)]
+        [StringLength(60, MinimumLength = 3), Required]
         public string WardBranch { get; set; }
         
-        [Display(Name= "Sabbath Day"), DataType(DataType.Date)]
+        [Display(Name= "Sabbath Day"), DataType(DataType.Date), Required]
         public DateTime SabbathDay { get; set;}
 
         [Display(Name = "Conducting")]
-        [StringLength(60, MinimumLength = 3)]
+        [StringLength(60, MinimumLength = 3), Required]
         public string ConductingLeader { get; set;}
 
         [Display(Name = "Open Hymn")]
@@ -26,23 +26,25 @@ namespace MeetingPlanner.Models
         public string OpenHymn { get; set; }
 
         [Display(Name = "Invocation")]
-        [StringLength(60, MinimumLength = 3)]
+        [StringLength(60, MinimumLength = 3), Required]
         public string OpenPrayer { get; set; }
 
         [Display(Name = "Sacrament Hymn")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), Required, StringLength(30)]
         public string SacramentHymn { get; set;}
 
+        [Display(Name = "Speaker")]
+        [StringLength(60, MinimumLength = 3), Required]
+        public string SpeakerSacrament { get; set; }
+
         [Display(Name = "Closing Hymn")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$"), Required, StringLength(30)]
         public string ClosingHymn { get; set;}
 
         [Display(Name = "Benediction")]
-        [StringLength(60, MinimumLength = 3)]
+        [StringLength(60, MinimumLength = 3), Required]
         public string ClosingPrayer { get; set;}
 
-
-        public List<Speaker> Speakers { get; set; }
 
     }
 }
