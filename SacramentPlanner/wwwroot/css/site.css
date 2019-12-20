@@ -82,4 +82,9 @@ body {
     &:#xf015;
 }
 
+thead {
+    background: rgba(60, 100, 250, 0.3);
+    border-top: none;
+}
+
 /* Here I will add my code*/
