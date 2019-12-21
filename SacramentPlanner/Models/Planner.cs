@@ -34,7 +34,7 @@ namespace MeetingPlanner.Models
         public string SacramentHymn { get; set;}
 
         [Display(Name = "Speaker")]
-        [StringLength(60, MinimumLength = 3), Required]
+        [StringLength(60, MinimumLength = 3)]
         public string SpeakerSacrament { get; set; }
 
         [Display(Name = "Closing Hymn")]
